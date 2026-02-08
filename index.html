@@ -5,21 +5,27 @@
   <title>Andrea Urzúa | Teaching & Live Sound</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("open");
+  }
+</script>
 <body>
 
-  <!-- Header / Navigation -->
-  <header>
-    <h1>Andrea Urzúa</h1>
-    <p>Musician · Teacher · Live Sound & Recording Engineer</p>
+<header class="top-bar">
+  <h1>Andrea Urzúa</h1>
 
-    <nav>
-      <a href="#bio">Biography</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#sound">Live Sound</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <nav id="menu">
+    <a href="#bio" onclick="toggleMenu()">Biography</a>
+    <a href="#teaching" onclick="toggleMenu()">Teaching</a>
+    <a href="#sound" onclick="toggleMenu()">Live Sound</a>
+    <a href="#gallery" onclick="toggleMenu()">Gallery</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+  </nav>
+</header>
 
   <!-- Biography -->
   <section id="bio">
