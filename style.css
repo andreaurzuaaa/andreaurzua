@@ -1,66 +1,102 @@
+/* Base resets */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 40px;
-  background: #fafafa;
-  color: #222;
+  padding: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.6;
 }
 
-header {
-  margin-bottom: 40px;
-}
-
-h1 {
-  font-size: 2.5em;
-  margin-bottom: 5px;
-}
-
-section {
-  margin-bottom: 30px;
-  max-width: 700px;
-}
-
-h2 {
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 5px;
-}
+/* Header */
 .top-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
+  padding: 20px 40px;
+}
+
+.site-title {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .menu-toggle {
-  font-size: 1.8em;
+  font-size: 1.8rem;
   background: none;
   border: none;
   cursor: pointer;
 }
 
-
 nav {
   position: absolute;
   top: 80px;
   right: 40px;
-  background: white;
-  border: 1px solid #ddd;
-  padding: 15px;
+  background: #fff;
+  padding: 15px 25px;
   display: none;
   flex-direction: column;
-}
-
-nav a {
-  text-decoration: none;
-  color: #222;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-nav a:last-child {
-  margin-bottom: 0;
+  border: 1px solid #ddd;
 }
 
 nav.open {
   display: flex;
+}
+
+nav a {
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-decoration: none;
+  color: #000;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  background: #f8f8f8;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  opacity: 0.85;
+}
+
+/* Sections */
+.content-section {
+  padding: 80px 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.content-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+}
+
+/* Gallery */
+.gallery-section {
+  padding: 60px 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.gallery-grid img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
 }
