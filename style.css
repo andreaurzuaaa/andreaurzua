@@ -138,3 +138,15 @@ footer {
     padding: 80px 20px;
   }
 }
+
+/* FULL BLEED GALLERY */
+.gallery-full {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.gallery-image {
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+}
