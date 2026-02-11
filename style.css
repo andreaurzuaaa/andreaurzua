@@ -1,80 +1,7 @@
-/* RESET */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
-  color: #000;
-  background: #fff;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* TOP BAR */
-.top-bar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 24px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #fff;
-  z-index: 10;
-}
-
-.site-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.menu-toggle {
-  font-size: 1.6rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-/* NAV MENU */
-nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 260px;
-  background: #fff;
-  padding: 120px 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
-}
-
-nav.open {
-  transform: translateX(0);
-}
-
-nav a {
-  text-decoration: none;
-  color: #000;
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-
-/* HERO */
 .hero {
   height: 100vh;
   width: 100%;
-  background-image: url("images/hero.jpg");
+  background-image: url("hero.jpg"); /* must match filename exactly */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -83,7 +10,6 @@ nav a {
   align-items: center;
   justify-content: center;
   position: relative;
-  overflow: hidden;
 }
 
 .hero::before {
@@ -104,67 +30,10 @@ nav a {
 
 .hero-overlay h1 {
   font-size: 3rem;
-  font-weight: 600;
   margin-bottom: 16px;
 }
 
 .hero-overlay p {
   font-size: 1.1rem;
   opacity: 0.85;
-}
-
-/* CONTENT SECTIONS */
-.content-section {
-  padding: 120px 40px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.content-section h2 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.content-section p {
-  font-size: 1.05rem;
-  color: #333;
-}
-
-/* GALLERY */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 0 40px;
-}
-
-.gallery-grid img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* FOOTER */
-footer {
-  padding: 120px 40px;
-  font-size: 0.95rem;
-  color: #444;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .hero-overlay h1 {
-    font-size: 2.2rem;
-  }
-
-  .top-bar {
-    padding: 20px;
-  }
-
-  .content-section,
-  .gallery-grid,
-  footer {
-    padding: 80px 20px;
-  }
 }
