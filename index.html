@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Andrea Urzúa — Teaching & Live Sound</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Header + Hamburger -->
+  <!-- Top Bar -->
   <header class="top-bar">
-    <h1 class="site-title">Andrea Urzúa</h1>
+    <div class="site-title">Andrea Urzúa</div>
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
     <nav id="menu">
@@ -21,59 +22,66 @@
     </nav>
   </header>
 
-  <!-- Hero / First Impression -->
-<section class="hero">
-  <div class="hero-overlay">
-    <h2>Teaching music and engineering live sound.</h2>
-    <p>Clear instruction. Clean mixes. Artist-first work.</p>
-  </div>
-</section>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Teaching music and engineering live sound.</h1>
+      <p>Clear instruction. Clean mixes. Artist-first work.</p>
+    </div>
+  </section>
 
-  <!-- Content Sections -->
+  <!-- Biography -->
   <section id="bio" class="content-section">
     <h2>Biography</h2>
     <p>
-      I’m a musician and engineer based in California. I work across teaching,
-      live sound, and studio environments, focusing on clarity, collaboration,
-      and real creative support.
+      I’m a musician and audio engineer based in California, working across
+      teaching, live sound, and studio production. My approach prioritizes
+      clarity, collaboration, and thoughtful execution.
     </p>
   </section>
 
+  <!-- Teaching -->
   <section id="teaching" class="content-section">
     <h2>Teaching</h2>
     <p>
-      Personalized lessons in guitar, music theory, and performance — tailored
-      to each student’s goals, level, and style.
+      I offer personalized music instruction in guitar, musicianship, and
+      performance development. Lessons are tailored to each student’s goals
+      and experience level.
     </p>
   </section>
 
+  <!-- Live Sound -->
   <section id="sound" class="content-section">
     <h2>Live Sound & Production</h2>
     <p>
-      Professional live sound support for venues, bands, and events.
-      Clean mixes. Clear communication. Consistent results.
+      Professional live sound services for venues, artists, and events.
+      Reliable setup, clean mixes, and strong communication from load-in
+      to final cue.
     </p>
   </section>
 
-  <section id="gallery" class="gallery-full">
-    <div class="gallery-image" style="background-image: url('images/live1.jpg')"></div>
-    <div class="gallery-image" style="background-image: url('images/live2.jpg')"></div>
-    <div class="gallery-image" style="background-image: url('images/teaching1.jpg')"></div>
+  <!-- Gallery -->
+  <section id="gallery" class="gallery-grid">
+    <img src="live1.jpg" alt="Live sound setup">
+    <img src="live2.jpg" alt="Concert mix position">
+    <img src="teaching1.jpg" alt="Teaching session">
   </section>
 
-  <!-- Contact / Footer -->
-  <footer id="contact" class="content-section">
-    <h2>Contact</h2>
-    <p>Email: yourname@email.com</p>
-    <p>Available for lessons, sound work, and collaborations.</p>
+  <!-- Contact -->
+  <footer id="contact">
+    <div class="content-section">
+      <h2>Contact</h2>
+      <p>Email: yourname@email.com</p>
+      <p>Based in California · Available for lessons and live sound work</p>
+    </div>
   </footer>
 
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById("menu");
-    menu.classList.toggle("open");
-  }
-</script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("open");
+    }
+  </script>
 
 </body>
 </html>
