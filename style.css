@@ -66,36 +66,37 @@ nav a {
   font-weight: 500;
 }
 
-/* HERO */
 .hero {
   height: 100vh;
-  background-image: url("hero.jpg"); /* corrected */
+  background-image: url("hero.jpg"); /* correct path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0 40px;
   position: relative;
 }
 
-/* Overlay */
+/* subtle dark overlay so text is readable */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.35);
 }
 
 .hero-overlay {
   position: relative;
-  color: #fff;
+  color: white;
   max-width: 700px;
+  text-align: center;
   z-index: 1;
 }
 
-.hero-overlay h2 {
+.hero-overlay h1 {
   font-size: 3rem;
   font-weight: 600;
   margin-bottom: 16px;
