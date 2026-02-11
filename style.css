@@ -1,39 +1,165 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #000;
+  background: #fff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* TOP BAR */
+.top-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 24px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  z-index: 10;
+}
+
+.site-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.menu-toggle {
+  font-size: 1.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* SIDE MENU */
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 260px;
+  background: #fff;
+  padding: 120px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+nav.open {
+  transform: translateX(0);
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* HERO */
 .hero {
   height: 100vh;
-  width: 100%;
-  background-image: url("hero.jpg"); /* must match filename exactly */
+  background-image: url("hero.jpg"); /* corrected */
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding: 0 40px;
   position: relative;
 }
 
+/* Overlay */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-  z-index: 0;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .hero-overlay {
   position: relative;
-  z-index: 1;
   color: #fff;
-  text-align: center;
   max-width: 700px;
+  z-index: 1;
 }
 
-.hero-overlay h1 {
+.hero-overlay h2 {
   font-size: 3rem;
+  font-weight: 600;
   margin-bottom: 16px;
+  line-height: 1.2;
 }
 
 .hero-overlay p {
   font-size: 1.1rem;
   opacity: 0.85;
+}
+
+/* CONTENT SECTIONS */
+.content-section {
+  padding: 140px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.content-section h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.content-section p {
+  font-size: 1rem;
+  color: #444;
+  max-width: 700px;
+}
+
+/* GALLERY GRID */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 120px 40px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* FOOTER */
+footer {
+  padding: 140px 40px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-overlay h2 {
+    font-size: 2.2rem;
+  }
+
+  .top-bar {
+    padding: 20px;
+  }
+
+  .content-section,
+  .gallery-grid,
+  footer {
+    padding: 80px 20px;
+  }
 }
