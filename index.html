@@ -32,8 +32,9 @@
 
   <!-- Biography -->
   <section id="bio" class="content-section">
-    <h2>Biography</h2>
-    <p>
+    <div class="content-box box-shadow-full flipboard-box">
+      <h2 class="section-heading">Biography</h2>
+      <p>
       I’m a Bay Area-based musicians with over 10 years of expirience performing 
       and creating music.
       
@@ -49,12 +50,14 @@
       teaching since 2019. I am super passionate about helping students grow their musical
       skills, confidence, and creativity through personalized and supportive instruction
     </p>
+    </div>
   </section>
 
   <!-- Teaching -->
   <section id="teaching" class="content-section">
-    <h2>Teaching</h2>
-    <p>
+    <div class="content-box box-shadow-full flipboard-box">
+      <h2 class="section-heading">Teaching</h2>
+      <p>
        One of the biggest beliefs that I have regarding teaching is that in order for the 
       student to succeed, the teacher must adapt to the student. That's the beauty of one
       on one lessons, you learn where the student thrives and where their faults are. As 
@@ -63,32 +66,71 @@
       it fun so that it engages the student. Of course, depending on the student it may need
       some altering, but enagement is key
     </p>
+    </div>
   </section>
 
   <!-- Live Sound -->
   <section id="sound" class="content-section">
-    <h2>Live Sound & Production</h2>
-    <p>
+    <div class="content-box box-shadow-full flipboard-box">
+      <h2 class="section-heading">Live Sound & Production</h2>
+      <p>
       Professional live sound services for venues, artists, and events.
       Reliable setup, clean mixes, and strong communication from load-in
       to final cue.
     </p>
+    </div>
   </section>
 
   <!-- Gallery -->
-  <section id="gallery" class="gallery-grid">
-    <img src="live1.jpg" alt="Live sound setup">
-    <img src="live2.jpg" alt="Concert mix position">
-    <img src="teaching1.jpg" alt="Teaching session">
+  <section id="gallery" class="gallery-section">
+    <h2 class="gallery-heading">Gallery</h2>
+    <div class="carousel flipboard-box">
+      <button type="button" class="carousel-btn carousel-prev" aria-label="Previous image">‹</button>
+      <button type="button" class="carousel-btn carousel-next" aria-label="Next image">›</button>
+      <div class="carousel-track-wrap">
+        <div class="carousel-track">
+          <div class="carousel-slide"><img src="images/000074810012_Original.jpg" alt="Gallery"></div>
+          <div class="carousel-slide"><img src="images/000074810024_Original.jpg" alt="Gallery"></div>
+          <div class="carousel-slide"><img src="images/FH-09_Original.jpg" alt="Gallery"></div>
+          <div class="carousel-slide"><img src="images/FH-31.JPEG" alt="Gallery"></div>
+          <div class="carousel-slide"><img src="images/IMG_0058.JPEG" alt="Gallery"></div>
+          <div class="carousel-slide"><img src="images/IMG_3813_Original.jpg" alt="Gallery"></div>
+          <div class="carousel-slide"><img src="images/IMG_6995_Original.jpg" alt="Gallery"></div>
+          <div class="carousel-slide"><img src="images/IMG_7554_Original.jpg" alt="Gallery"></div>
+          <div class="carousel-slide"><img src="images/IMG_7559_Original.jpg" alt="Gallery"></div>
+          <div class="carousel-slide"><img src="images/IMG_7588_Original.jpg" alt="Gallery"></div>
+          <div class="carousel-slide"><img src="images/IMG_7590_Original.jpg" alt="Gallery"></div>
+          <div class="carousel-slide"><img src="images/IMG_3409%203.JPG" alt="Gallery"></div>
+          <div class="carousel-slide"><img src="images/IMG_3410%203.JPG" alt="Gallery"></div>
+          <div class="carousel-slide"><img src="images/IMG_3411%203.JPG" alt="Gallery"></div>
+          <div class="carousel-slide"><img src="images/IMG_3416%202.JPG" alt="Gallery"></div>
+          <div class="carousel-slide"><img src="images/IMG_3420%202.JPG" alt="Gallery"></div>
+          <div class="carousel-slide"><img src="images/IMG_3422%202.JPG" alt="Gallery"></div>
+          <div class="carousel-slide"><img src="images/IMG_3424%202.JPG" alt="Gallery"></div>
+          <div class="carousel-slide"><img src="images/IMG_3430%202.JPG" alt="Gallery"></div>
+          <div class="carousel-slide"><img src="images/IMG_3431%202.JPG" alt="Gallery"></div>
+          <div class="carousel-slide"><img src="images/IMG_3432%202.JPG" alt="Gallery"></div>
+          <div class="carousel-slide"><img src="images/P1500493.JPEG" alt="Gallery"></div>
+          <div class="carousel-slide"><img src="images/P1511727.JPEG" alt="Gallery"></div>
+          <div class="carousel-slide"><img src="images/p.jpg" alt="Gallery"></div>
+        </div>
+      </div>
+      <div class="carousel-dots" aria-hidden="true"></div>
+    </div>
   </section>
 
   <!-- Contact -->
-  <footer id="contact">
-    <div class="content-section">
-      <h2>Contact</h2>
-      <p>Email: yourname@email.com</p>
-      <p>Based in California · Available for lessons and live sound work</p>
-    </div>
+  <footer id="contact" class="footer-paralax">
+    <section class="contact-mf">
+      <div class="contact-box box-shadow-full flipboard-box">
+        <h2>Get in Touch</h2>
+        <p class="contact-subtitle">Send us a message</p>
+        <p class="contact-intro">I'm always open to discussing new opportunities, collaborations, or interesting projects. Whether it's engineering work, music collaborations, or projects that blend teaching and sound—feel free to reach out.</p>
+        <p><a href="mailto:andreaurzuaa@gmail.com" class="contact-link">andreaurzuaa@gmail.com</a></p>
+        <p><a href="https://instagram.com/andreaurzuaaa" target="_blank" rel="noopener noreferrer" class="contact-link">@andreaurzuaaa</a></p>
+        <p class="contact-note">Based in California · Available for lessons and live sound work</p>
+      </div>
+    </section>
   </footer>
 
   <script>
@@ -96,6 +138,61 @@
       const menu = document.getElementById("menu");
       menu.classList.toggle("open");
     }
+
+    (function() {
+      var track = document.querySelector(".carousel-track");
+      var slides = document.querySelectorAll(".carousel-slide");
+      var dotsContainer = document.querySelector(".carousel-dots");
+      var prevBtn = document.querySelector(".carousel-prev");
+      var nextBtn = document.querySelector(".carousel-next");
+      if (!track || !slides.length) return;
+      var index = 0;
+      var total = slides.length;
+      var autoplayMs = 4500;
+      var autoplayTimer;
+
+      function goTo(i) {
+        index = (i + total) % total;
+        track.style.transform = "translateX(-" + index * 100 + "%)";
+        var dots = dotsContainer.querySelectorAll(".carousel-dot");
+        dots.forEach(function(d, j) { d.classList.toggle("active", j === index); });
+      }
+      function next() { goTo(index + 1); }
+      function prev() { goTo(index - 1); }
+      for (var d = 0; d < total; d++) {
+        var dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "carousel-dot" + (d === 0 ? " active" : "");
+        dot.setAttribute("aria-label", "Go to image " + (d + 1));
+        dot.addEventListener("click", function(i) { return function() { goTo(i); }; }(d));
+        dotsContainer.appendChild(dot);
+      }
+      prevBtn.addEventListener("click", prev);
+      nextBtn.addEventListener("click", next);
+      function startAutoplay() {
+        autoplayTimer = setInterval(next, autoplayMs);
+      }
+      function stopAutoplay() {
+        clearInterval(autoplayTimer);
+      }
+      track.closest(".carousel").addEventListener("mouseenter", stopAutoplay);
+      track.closest(".carousel").addEventListener("mouseleave", startAutoplay);
+      startAutoplay();
+    })();
+
+    (function() {
+      var boxes = document.querySelectorAll(".flipboard-box");
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("flipboard-visible");
+          } else {
+            entry.target.classList.remove("flipboard-visible");
+          }
+        });
+      }, { threshold: 0.15, rootMargin: "0px 0px -30px 0px" });
+      boxes.forEach(function(b) { observer.observe(b); });
+    })();
   </script>
 
 </body>
